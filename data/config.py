@@ -17,7 +17,7 @@ channel_trash = '-1001679543941'
 host = 'localhost'
 port = 3306
 user = 'root'
-password = '26262866A'
+password = 'admin'
 db_name = 'main_db'
 
 # Варианты перевода и получения по странам
