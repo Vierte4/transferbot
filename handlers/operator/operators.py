@@ -23,9 +23,9 @@ async def new_order_handler(call: types.CallbackQuery, callback_data: dict):
     else:
         start_work(connection=connection, id=id, user=call.from_user,
                    status='Удалён')
-        await bot.send_message(chat_id=channel_process,
+        await bot.send_message(chat_id=channel_trash,
                                text=message_txt,
-                               reply_markup=channel_trash(id))
+                               reply_markup=deleted_order(id))
         await call.message.delete()
 
 
@@ -67,7 +67,7 @@ async def completed_order_handler(call: types.CallbackQuery, callback_data: dict
                           operator_id=call.from_user.id)
         await bot.send_message(chat_id=channel_process,
                                text=message_txt,
-                               reply_markup=completed_order(id))
+                               reply_markup=in_process(id))
         await call.message.delete()
     else:
         complete_order_bd(connection=connection, id=id, status='Удалена',

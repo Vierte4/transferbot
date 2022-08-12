@@ -4,7 +4,7 @@ from threading import Thread
 
 BOT_TOKEN = '5388513707:AAFzQLCby0XQxWzja84DTv4DtPT178coOEg'  # Токен бота
 
-ADMINS = ['5169720405']  # id админов
+ADMINS = ['1']  # id админов
 USERS = []  # id пользователей
 
 # ID каналов
@@ -17,7 +17,7 @@ channel_trash = '-1001679543941'
 host = 'localhost'
 port = 3306
 user = 'root'
-password = 'admin'
+password = '26262866A'
 db_name = 'main_db'
 
 # Варианты перевода и получения по странам

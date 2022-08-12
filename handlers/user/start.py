@@ -43,7 +43,7 @@ async def georgia_ukrain_handler(message: types.Message, state: FSMContext):
 async def georgia_ukrain_handler(message: types.Message, state: FSMContext):
     temp[message.from_user.id] = {'type': 'RUB'}
     await message.answer(text='Как переводите деньги в России?',
-                         reply_markup=georgia_transfer_kb())
+                         reply_markup=russia_transfer_kb())
     await ru_ua_state.default.set()
 
 

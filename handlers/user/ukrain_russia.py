@@ -11,7 +11,7 @@ from utils.create_order import create_order
 
 # Ukrain -> Russia
 @dp.callback_query_handler(ukrain_transfer_callback.filter(),
-                           state=ua_ru_state.default)
+                           state= ua_ru_state.default)
 async def choose_way_to_get_handler(call: types.CallbackQuery,
                                     callback_data: dict):
     answer_n = callback_data.get('answer')
@@ -19,7 +19,7 @@ async def choose_way_to_get_handler(call: types.CallbackQuery,
     temp[call.from_user.id]['type'] = ukrain_transfer[answer][0]
     temp[call.from_user.id]['way_to_give'] = ukrain_transfer[answer][1]
 
-    await call.message.answer(text='Как получаете деньги в Грузии?',
+    await call.message.answer(text='Как получаете деньги в России?',
                               reply_markup=russia_transfer_kb())
 
 

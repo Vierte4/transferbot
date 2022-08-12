@@ -21,7 +21,8 @@ async def save_order_handler(message: types.Message, state: FSMContext):
     label_recieve = temp[user_id]["label_recieve"]
 
     contact = message.contact
-    created_time = datetime.datetime.now()
+    offset = datetime.timezone(datetime.timedelta(hours=3))
+    created_time = datetime.datetime.now(offset)
     id = insert_data(
         connection=connection,
         fullname=message.from_user.full_name,
